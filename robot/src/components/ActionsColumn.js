@@ -3,6 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import DeleteIcon from '@mui/icons-material/Delete';
 import {useNavigate} from "react-router-dom";
 
 export default function ActionsColumn({ row }) {
@@ -14,6 +15,10 @@ export default function ActionsColumn({ row }) {
 
     const handleDown = async () => {
         await row.handleDown(row.phase, row.id)
+    }
+
+    const handleDelete = async () => {
+        await row.handleDelete(row.phase, row.id)
     }
 
     return (
@@ -31,6 +36,11 @@ export default function ActionsColumn({ row }) {
             <Tooltip title={"Move Down"}>
                 <IconButton onClick={handleDown}>
                     <ArrowDownwardIcon/>
+                </IconButton>
+            </Tooltip>
+            <Tooltip title={"Delete"}>
+                <IconButton onClick={handleDelete}>
+                    <DeleteIcon/>
                 </IconButton>
             </Tooltip>
         </Stack>

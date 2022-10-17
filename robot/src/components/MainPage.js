@@ -3,9 +3,19 @@ import ContainerLayout from "./ContainerLayout";
 import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit';
 import {useNavigate} from "react-router-dom";
+import percentage from "../utils/percentage"
+import getStates from "../utils/getStates";
+import runPhase from "../utils/runPhase";
 
 export default function MainPage() {
     const navigate = useNavigate();
+
+    async function startPhase(phase) {
+        const percentageTable = await percentage()
+        const states = await getStates(phase)
+        runPhase(percentageTable, states)
+    }
+
     return (
         <ContainerLayout>
             <AppBar position="static">
@@ -17,14 +27,14 @@ export default function MainPage() {
             </AppBar>
             <Stack spacing={5} alignItems={"center"}>
                 <div></div>
-                <Stack direction={"row"} spacing={1}>
-                    <Button> Start phase 1 </Button>
+                <Stack direction={"row"}>
+                    <Button onClick={() => startPhase(1)}> Start phase 1 </Button>
                     <IconButton onClick={() => navigate('/editphase/1')}>
                         <EditIcon/>
                     </IconButton>
                 </Stack>
                 <Stack direction={"row"}>
-                    <Button> Start phase 2 </Button>
+                    <Button onClick={() => startPhase(2)}> Start phase 2 </Button>
                     <IconButton onClick={() => navigate('/editphase/2')}>
                         <EditIcon/>
                     </IconButton>

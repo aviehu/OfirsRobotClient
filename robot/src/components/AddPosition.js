@@ -1,8 +1,10 @@
 import {useNavigate, useParams} from "react-router-dom";
 import ContainerLayout from "./ContainerLayout";
-import {AppBar, Button, Stack, TextField, Toolbar, Typography} from "@mui/material";
+import {AppBar, Button, Stack, TextField, Toolbar, Tooltip, Typography} from "@mui/material";
 import {useState} from "react";
 import addPosition from "../utils/addPosition";
+import IconButton from "@mui/material/IconButton";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export default function AddPosition() {
     const [position, setPosition] = useState("")
@@ -27,6 +29,11 @@ export default function AddPosition() {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                        Add Position - Phase - {phase}
                     </Typography>
+                    <Tooltip title={"Back"}>
+                        <IconButton onClick={() => navigate(`/editphase/${phase}`)}>
+                            <ArrowBackIcon style={{color: "white"}}/>
+                        </IconButton>
+                    </Tooltip>
                 </Toolbar>
             </AppBar>
             <Stack alignItems={'center'} position={"relative"} spacing={5} paddingTop={15}>

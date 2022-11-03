@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6c1e63b-20ef-4979-a721-95dea52ee787" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/robot/src/components/Container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robot/src/components/ContainerLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot/src/components/AddPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/robot/src/components/AddPosition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot/src/components/EditPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/robot/src/components/EditPosition.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,17 +22,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Aviehu/Desktop/Work/RobotServer",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Aviehu/Desktop/Work/OfirsRobotClient&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Aviehu\Desktop\Work\OfirsRobotClient\robot\src\components" />
@@ -66,7 +67,15 @@
       <workItem from="1661773242153" duration="24000" />
       <workItem from="1661874768537" duration="593000" />
       <workItem from="1661878147807" duration="8493000" />
-      <workItem from="1665222108585" duration="7730000" />
+      <workItem from="1665222108585" duration="8067000" />
+      <workItem from="1665913142895" duration="4883000" />
+      <workItem from="1666028191571" duration="781000" />
+      <workItem from="1666173723943" duration="8000" />
+      <workItem from="1666547708726" duration="7840000" />
+      <workItem from="1666800692422" duration="104000" />
+      <workItem from="1667071815460" duration="537000" />
+      <workItem from="1667284831937" duration="3347000" />
+      <workItem from="1667469302757" duration="703000" />
     </task>
     <servers />
   </component>

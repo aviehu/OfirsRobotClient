@@ -5,19 +5,26 @@ import {useState} from "react";
 import addPosition from "../utils/addPosition";
 import IconButton from "@mui/material/IconButton";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import Slider from "@mui/material/Slider";
 
 export default function AddPosition() {
     const [position, setPosition] = useState("")
-    const [timeToGet, setTimeToGet] = useState(0)
     const [timeToStay, setTimeToStay] = useState(0)
+    const [leftHandPower, setLeftHandPower] = useState(1)
+    const [rightHandPower, setRightHandPower] = useState(1)
+    const [leftLegPower, setLeftLegPower] = useState(1)
+    const [rightLegPower, setRightLegPower] = useState(1)
     const { phase } = useParams()
     const navigate = useNavigate()
 
     const handleSubmit = async () => {
         const newPosition = {
             position,
-            timeToGet,
             timeToStay,
+            leftHandPower,
+            rightHandPower,
+            leftLegPower,
+            rightLegPower
         }
         await addPosition(newPosition, phase)
         navigate(`/editphase/${phase}`)
@@ -36,10 +43,33 @@ export default function AddPosition() {
                     </Tooltip>
                 </Toolbar>
             </AppBar>
-            <Stack alignItems={'center'} position={"relative"} spacing={5} paddingTop={15}>
+            <Stack alignItems={'center'} position={"relative"} spacing={5} paddingTop={5} paddingBottom={5}>
                 <TextField onChange={(event) => setPosition(event.target.value)} label={"Position"} variant="standard" style={{minWidth: 400}}/>
-                <TextField onChange={(event) => setTimeToGet(event.target.value)} label={"Time to get to"} variant="standard" style={{minWidth: 400}}/>
                 <TextField onChange={(event) => setTimeToStay(event.target.value)} label={"Time to stay"} variant="standard" style={{minWidth: 400}}/>
+                <Stack direction={"column"}>
+                    <Typography id="input-slider" fontSize={12} gutterBottom> Left Hand Power </Typography>
+                    <Tooltip title={leftHandPower}>
+                        <Slider value={leftHandPower} min={1} max={10} step={1} onChange={(event) => setLeftHandPower(event.target.value)} style={{minWidth: 400, maxWidth:400}}></Slider>
+                    </Tooltip>
+                </Stack>
+                <Stack direction={"column"}>
+                    <Typography id="input-slider" fontSize={12} gutterBottom> Right Hand Power </Typography>
+                    <Tooltip title={rightHandPower}>
+                        <Slider value={rightHandPower} min={1} max={10} step={1} onChange={(event) => setRightHandPower(event.target.value)} style={{minWidth: 400, maxWidth:400}}></Slider>
+                    </Tooltip>
+                </Stack>
+                <Stack direction={"column"}>
+                    <Typography id="input-slider" fontSize={12} gutterBottom> Left Leg Power </Typography>
+                    <Tooltip title={leftLegPower}>
+                        <Slider value={leftLegPower} min={1} max={10} step={1} onChange={(event) => setLeftLegPower(event.target.value)} style={{minWidth: 400, maxWidth:400}}></Slider>
+                    </Tooltip>
+                </Stack>
+                <Stack direction={"column"}>
+                    <Typography id="input-slider" fontSize={12} gutterBottom> Right Leg Power </Typography>
+                    <Tooltip title={rightLegPower}>
+                        <Slider value={rightLegPower} min={1} max={10} step={1} onChange={(event) => setRightLegPower(event.target.value)} style={{minWidth: 400, maxWidth:400}}></Slider>
+                    </Tooltip>
+                </Stack>
                 <Button style={{minWidth: 400}} onClick={handleSubmit}>Add Position</Button>
             </Stack>
         </ContainerLayout>

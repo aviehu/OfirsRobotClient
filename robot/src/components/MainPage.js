@@ -21,7 +21,7 @@ export default function MainPage({ status }) {
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <Stack marginTop={10} spacing={5} justifyContent={"center"} alignItems={"center"} direction={"row"}>
+            <Stack  marginTop={10} spacing={5} justifyContent={"center"} alignItems={"center"} direction={"row"}>
                 <Stack direction={"row"}>
                     <Button variant={"contained"} color={"primary"} onClick={() => runPhase(1)}> Start phase 1 </Button>
                     <Tooltip title={"Edit phase 1"}>
@@ -34,6 +34,30 @@ export default function MainPage({ status }) {
                     <Button variant={"contained"} color={"primary"} onClick={() => runPhase(2)}> Start phase 2 </Button>
                     <Tooltip title={"Edit phase 2"}>
                         <IconButton onClick={() => navigate('/editphase/2')}>
+                            <EditIcon/>
+                        </IconButton>
+                    </Tooltip>
+                </Stack>
+                <Stack direction={"row"}>
+                    <Button variant={"contained"} color={"primary"} onClick={() => runPhase(3)}> Start phase 3 </Button>
+                    <Tooltip title={"Edit phase 3"}>
+                        <IconButton onClick={() => navigate('/editphase/3')}>
+                            <EditIcon/>
+                        </IconButton>
+                    </Tooltip>
+                </Stack>
+                <Stack direction={"row"}>
+                    <Button variant={"contained"} color={"primary"} onClick={() => runPhase(4)}> Start phase 4 </Button>
+                    <Tooltip title={"Edit phase 4"}>
+                        <IconButton onClick={() => navigate('/editphase/4')}>
+                            <EditIcon/>
+                        </IconButton>
+                    </Tooltip>
+                </Stack>
+                <Stack direction={"row"}>
+                    <Button variant={"contained"} color={"primary"} onClick={() => runPhase(5)}> Start phase 5 </Button>
+                    <Tooltip title={"Edit phase 5"}>
+                        <IconButton onClick={() => navigate('/editphase/5')}>
                             <EditIcon/>
                         </IconButton>
                     </Tooltip>

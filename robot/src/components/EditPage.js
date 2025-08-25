@@ -66,8 +66,8 @@ export default function EditPage() {
     }
 
     return (
-        <ContainerLayout >
-            <AppBar position="static">
+        <div>
+            <AppBar position="fixed">
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Robot App - Edit Phase - {phase}
@@ -79,18 +79,20 @@ export default function EditPage() {
                     </Tooltip>
                 </Toolbar>
             </AppBar>
-            <DataGrid
-                style={{ padding: 20}}
-                autoHeight
-                rows={wrapRows(states)}
-                columns={columns}
-                pageSize={20}
-                rowsPerPageOptions={[20]}
-                disableSelectionOnClick
-            />
-            <Button onClick={() => navigate(`/addposition/${phase}`)} style={{paddingLeft: 10}}>
-                Add position
-            </Button>
-        </ContainerLayout>
+            <ContainerLayout>        
+                <DataGrid
+                    style={{ padding: 20}}
+                    autoHeight
+                    rows={wrapRows(states)}
+                    columns={columns}
+                    pageSize={20}
+                    rowsPerPageOptions={[20]}
+                    disableSelectionOnClick
+                />
+                <Button onClick={() => navigate(`/addposition/${phase}`)} style={{paddingLeft: 10}}>
+                    Add position
+                </Button>
+            </ContainerLayout>
+        </div>
     )
 }
